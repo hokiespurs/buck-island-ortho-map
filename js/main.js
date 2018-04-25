@@ -16,12 +16,13 @@ L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/M
     maxZoom: 23
 }).addTo(mymap);
 
-L.tileLayer('http://research.engr.oregonstate.edu/lidar/pointcloud/20180319_USVI/googlemaps/20180325_BuckIslandAll/{z}/{x}/{y}.png',{
+L.tileLayer('http://research.engr.oregonstate.edu/lidar/pointcloud/20180319_USVI/googlemaps/20180325_MavicBuckIsland/{z}/{x}/{y}.png',{
     minZoom: 10,
     maxNativeZoom: 22,
     maxZoom: 23,
     noWrap: true,
-    bounds: mybounds
+    bounds: mybounds,
+    attribution: '<div id="credits" style="display:inline">UAS Imagery acquired by Oregon State University in collaboration with NOAA and NPS | Basemap &copy; ArcGIS | Made By Richie Slocum | <a href="https://github.com/hokiespurs/usvi-noaa-data"><i class="fa fa-github"></i> More Info </a></div>'
 }).addTo(mymap);
 
 function onMapClick(e) {
