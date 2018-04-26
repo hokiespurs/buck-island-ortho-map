@@ -1,5 +1,5 @@
 # buck-island-ortho-map
-This repository contains the source code for the website which displays the Orthomosaic of Buck Island generated using a small unmanned aerial system(UAS), the DJI Mavic Pro, on March 23rd, 26th, and 27th of 2018.
+This repository contains the source code for the [website](https://hokiespurs.github.io/buck-island-ortho-map/) which displays the Orthomosaic of Buck Island generated using a small unmanned aerial system(UAS), the DJI Mavic Pro, on March 23rd, 26th, and 27th of 2018.
 
 ![BuckIslandRainbow](https://github.com/hokiespurs/buck-island-ortho-map/blob/master/img/BuckRainbow1080.png)
 
