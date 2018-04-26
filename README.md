@@ -5,7 +5,7 @@ This repository contains the source code for the website which displays the Orth
 
 ## Project Summary
 
-This imagery was acquired and processed by Oregon State University, in collaboration with the National Oceanographic and Atmospheric Administration(NOAA) and the National Park Service(NPS), as part of a research project to assess the accuracy of SfM derived bathymetry. With 13 separate flights across three days, the nearshore of the island was mapped to 5cm horizontal resolution. The flights were flown by FAA Part-107 licensed pilots in class G airspace, and waivers were granted by the NPS to fly on Buck Island.  Each of these flights were processed using Agisoft Photoscan, and the resultant orthophoto is visualized using the javascript library Leaflet.
+This imagery was acquired and processed by Oregon State University graduate students, Richie Slocum and Chase Simpson, in collaboration with the National Oceanographic and Atmospheric Administration(NOAA) and the National Park Service(NPS), as part of a research project to assess the accuracy of SfM derived bathymetry. With 13 separate flights across three days, the nearshore of the island was mapped to 5cm horizontal resolution. The flights were flown by FAA Part-107 licensed pilots in class G airspace, and waivers were granted by the NPS to fly on Buck Island.  Each of these flights were processed using Agisoft Photoscan, and the resultant orthophoto is visualized using the javascript library Leaflet.
 
 ## Data Acquisition
 <img style="float: right;" src="https://github.com/hokiespurs/buck-island-ortho-map/blob/master/img/richieflying.jpg" width=500px>
@@ -23,13 +23,12 @@ The color corrected imagery was processed in Agisoft Photoscan v1.4.1 using the 
 The data was georeferenced using the internal GPS of the drone (`WGS84`). While the horizontal accuracy has not been assessed, errors greater than 1m are likely throughout the orthophoto.  Due to the numerous flights across 3 days and the lack of rigorous ground control or check points, these errors are likely nonlinear and can not be treated as a steady state offset.  An attempt was made to normalize the white balance and exposure across the various flights, but this method is likely not good enough to compute any worthwhile radiometric derived products. Methods to compute accurate elevations from the SfM results through water (refraction corrected) are still very experimental, and are not provided... yet.
 
 ## Project Team
-
 - Tim Battista (NOAA PI)
 - Bryan Costa (NOAA)
-- Matt Sharr (NOAA)
-- Clayton Polluck (NPS)
 - Nate Holloway (NPS)
 - Chris Parrish (OSU)
+- Clayton Polluck (NPS)
+- Matt Sharr (NOAA)
 - Chase Simpson (OSU)
 - Richie Slocum (OSU)
 - Wayne Wright
