@@ -15,7 +15,7 @@ Takeoff was from multiple locations.
 
 ## Data Processing Methodology
 
-The UAS imagery was initially processed in Matlab to correct for white-balance and exposure issues.  Overlapping images from each flight were visually observed and scalar values for each of the RGB channels were manually tuned until the white balance of each flight appeared consistent between the flights.  While an attempt was made to histogram match specific sections of the overlapping images, the methodology was not very mathematically robust.  See below for an example of a corrected image.
+The UAS imagery was initially processed in Matlab to correct for white-balance and exposure issues.  Overlapping images from each flight were visually observed and scalar values for each of the RGB channels were manually tuned until the white balance of each flight appeared consistent between the flights.  While an attempt was made to histogram match specific sections of the overlapping images, the methodology was not very mathematically robust.  See below for an example of a corrected image. Notice how the green tint of the water in the bottom left image is corrected to represent a more blue color in the lower right image.
 ![colorcorrected](https://github.com/hokiespurs/buck-island-ortho-map/blob/master/img/colorcorr.png)
 
 The color corrected imagery was processed in Agisoft Photoscan v1.4.1 using the exif GPS positions as georeferencing information.  The sparse pointcloud(`photoscan accuracy: medium`) was used to generate a triangulated mesh, and a 5cm Orthophoto was reprojected onto the mesh.  A polygon was generated to clean up the edges of the orthophoto, and the data was exported as map tiles.
