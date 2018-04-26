@@ -1,5 +1,5 @@
 var mymap = L.map('map', {
-    center: [17.7858,-64.6212],
+    center: [17.78266,-64.62116],
     zoom: 15,
     maxZoom: 23,
     minZoom: 13,
@@ -27,14 +27,20 @@ var tiles = L.tileLayer('http://research.engr.oregonstate.edu/lidar/pointcloud/2
 
 L.control.polylineMeasure(options).addTo(mymap);
 L.easyButton( '<span class="btn"><i class="fa fa-home"></i></span>', zoom2home).addTo(mymap);
-L.easyButton( '<span class="btn"><i class="fa fa-star"></i></span>', zoom2turtle).addTo(mymap);
+L.easyButton( '<span class="btn"><i class="fa fa-star"></i></span>', zoom2highlights).addTo(mymap);
 L.easyButton( '<span class="btn"><i class="fa fa-info-circle"></i></span>', showinfo).addTo(mymap);
 
-function zoom2turtle() {
-    var turtlelat = 17.7845335;
-    var turtlelng = -64.625899;
-    var turtlezoom = 22;
-    mymap.flyTo([turtlelat, turtlelng],turtlezoom);
+var highlights = [[17.7845335, -64.625899, 22],
+    [17.7844109, -64.615966, 21],
+    [17.7877548, -64.609541, 22],
+    [17.7920430, -64.621370, 20],
+    [17.7902309, -64.632024, 21]];
+//     [17.78266, -64.62116, 15]
+var ih = 0;
+function zoom2highlights() {
+    mymap.flyTo([highlights[ih][0], highlights[ih][1]],highlights[ih][2]);
+    ih+=1;
+    if (ih>highlights.length-1) {ih=0;}
 }
 function zoom2home() {
     var homelat = 17.78266;
