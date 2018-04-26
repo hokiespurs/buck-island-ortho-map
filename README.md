@@ -1,17 +1,15 @@
 # buck-island-ortho-map
-This repository contains the source code for the website which displays the Orthomosaic of Buck Island generated using a small unmanned aerial system(UAS), the DJI Mavic Pro, on March 23rd, 26th, and 27th, 2018.
+This repository contains the source code for the website which displays the Orthomosaic of Buck Island generated using a small unmanned aerial system(UAS), the DJI Mavic Pro, on March 23rd, 26th, and 27th of 2018.
 
 ![BuckIslandRainbow](https://github.com/hokiespurs/buck-island-ortho-map/blob/master/img/BuckRainbow1080.png)
 
 ## Project Summary
 
-This imagery was acquired and processed by Oregon State University, in collaboration with the National Oceanographic and Atmospheric Administration(NOAA) and the National Park Service(NPS), as part of a research project to assess the accuracy of SfM derived bathymetry. With 13 separate flights across three days, the nearshore of the island was mapped to 5cm GSD. The flights were flown by FAA Part-107 certified pilots in class G airspace, and waivers were granted by the NPS to fly on over Buck Island.  Each of these flights were processed using Agisoft Photoscan, and the resultant orthophoto is visualized using the javascript library Leaflet.
+This imagery was acquired and processed by Oregon State University, in collaboration with the National Oceanographic and Atmospheric Administration(NOAA) and the National Park Service(NPS), as part of a research project to assess the accuracy of SfM derived bathymetry. With 13 separate flights across three days, the nearshore of the island was mapped to 5cm GSD. The flights were flown by FAA Part-107 licensed pilots in class G airspace, and waivers were granted by the NPS to fly on Buck Island.  Each of these flights were processed using Agisoft Photoscan, and the resultant orthophoto is visualized using the javascript library Leaflet.
 
 ## Data Acquisition
 <img style="float: right;" src="https://github.com/hokiespurs/buck-island-ortho-map/blob/master/img/richieflying.jpg" width=500px>
-The DJI Mavic was chosen as the platform for this data acquisition due to it portability and long flight times (>15min).  Each of the flights was performed at 400ft elevation, which increased the footprint of each image, minimizing the number of flights required.  The overlap and sidelap for each flight was 65%.
-
-Takeoff was from multiple locations.
+The DJI Mavic was chosen as the platform for this data acquisition due to it portability and long flight times (>15min).  Each of the flights was performed at 400ft elevation, which increased the footprint of each image, minimizing the number of flights required.  The overlap and sidelap for each flight was 65%, as the focus of this data acquisition was to generate an orthophoto.  For SfM processing where elevations are desired, a higher overlap/sidelap is adventageous.  
 
 ## Data Processing Methodology
 
@@ -35,6 +33,3 @@ The data was georeferenced using the internal GPS of the drone (`WGS84`). While 
 - Chase Simpson (OSU)
 - Richie Slocum (OSU)
 - Wayne Wright
-
-## Acknowledgements
-
