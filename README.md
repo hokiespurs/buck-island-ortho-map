@@ -5,7 +5,7 @@ This repository contains the source code for the website which displays the Orth
 
 ## Project Summary
 
-This imagery was acquired and processed by Oregon State University, in collaboration with the National Oceanographic and Atmospheric Administration(NOAA) and the National Park Service(NPS), as part of a research project to assess the accuracy of SfM derived bathymetry. With 13 separate flights across three days, the nearshore of the island was mapped to 5cm GSD. The flights were flown by FAA Part-107 licensed pilots in class G airspace, and waivers were granted by the NPS to fly on Buck Island.  Each of these flights were processed using Agisoft Photoscan, and the resultant orthophoto is visualized using the javascript library Leaflet.
+This imagery was acquired and processed by Oregon State University, in collaboration with the National Oceanographic and Atmospheric Administration(NOAA) and the National Park Service(NPS), as part of a research project to assess the accuracy of SfM derived bathymetry. With 13 separate flights across three days, the nearshore of the island was mapped to 5cm horizontal resolution. The flights were flown by FAA Part-107 licensed pilots in class G airspace, and waivers were granted by the NPS to fly on Buck Island.  Each of these flights were processed using Agisoft Photoscan, and the resultant orthophoto is visualized using the javascript library Leaflet.
 
 ## Data Acquisition
 <img style="float: right;" src="https://github.com/hokiespurs/buck-island-ortho-map/blob/master/img/richieflying.jpg" width=500px>
