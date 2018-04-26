@@ -16,7 +16,7 @@ L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/M
     maxZoom: 23
 }).addTo(mymap);
 
-L.tileLayer('http://research.engr.oregonstate.edu/lidar/pointcloud/20180319_USVI/googlemaps/20180325_MavicBuckIsland/{z}/{x}/{y}.png',{
+var tiles = L.tileLayer('http://research.engr.oregonstate.edu/lidar/pointcloud/20180319_USVI/googlemaps/20180325_MavicBuckIsland/{z}/{x}/{y}.png',{
     minZoom: 10,
     maxNativeZoom: 22,
     maxZoom: 23,
@@ -25,12 +25,46 @@ L.tileLayer('http://research.engr.oregonstate.edu/lidar/pointcloud/20180319_USVI
     attribution: '<div id="credits" style="display:inline">UAS Imagery acquired by Oregon State University in collaboration with NOAA and NPS | Basemap &copy; ArcGIS | Made By Richie Slocum | <a href="https://github.com/hokiespurs/usvi-noaa-data"><i class="fa fa-github"></i> More Info </a></div>'
 }).addTo(mymap);
 
-function onMapClick(e) {
-    var pixelPoint = mymap.project(e.latlng, mymap.getZoom()).floor();
-    x = Math.floor(pixelPoint.x/256);
-    y = Math.floor(pixelPoint.y/256);
-    z = mymap.getZoom();
-    console.log(x.toString() + "/" + y.toString() + "/" + z.toString());
+L.control.polylineMeasure(options).addTo(mymap);
+L.easyButton( '<span class="btn"><i class="fa fa-home"></i></span>', zoom2home).addTo(mymap);
+L.easyButton( '<span class="btn"><i class="fa fa-star"></i></span>', zoom2turtle).addTo(mymap);
+L.easyButton( '<span class="btn"><i class="fa fa-info-circle"></i></span>', showinfo).addTo(mymap);
+
+function zoom2turtle() {
+    var turtlelat = 17.7845335;
+    var turtlelng = -64.625899;
+    var turtlezoom = 22;
+    mymap.flyTo([turtlelat, turtlelng],turtlezoom);
+}
+function zoom2home() {
+    var homelat = 17.78266;
+    var homelng = -64.62116;
+    var homezoom = 15;
+    mymap.flyTo([homelat, homelng],homezoom);
+}
+function showinfo() {
+    modal.style.display = "block";
 }
 
-mymap.on('click', onMapClick);
+
+L.control.scale().addTo(mymap);
+
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
