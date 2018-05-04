@@ -43,8 +43,8 @@ function zoom2highlights() {
     if (ih>highlights.length-1) {ih=0;}
 }
 function zoom2home() {
-    var homelat = 17.78266;
-    var homelng = -64.62116;
+    var homelat = 17.78673508668526;
+    var homelng = -64.62036609736971;
     var homezoom = 15;
     mymap.flyTo([homelat, homelng],homezoom);
 }
