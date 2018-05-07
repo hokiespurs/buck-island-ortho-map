@@ -27,7 +27,7 @@ The imagery was georeferenced using the image exif data, which comes from the co
 - Bryan Costa (NOAA)
 - Nate Holloway (NPS)
 - Chris Parrish (OSU)
-- Clayton Polluck (NPS)
+- Clayton Pollock (NPS)
 - Matt Sharr (NOAA)
 - Chase Simpson (OSU)
 - Richie Slocum (OSU)

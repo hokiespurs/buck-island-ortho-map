@@ -1,5 +1,5 @@
 var mymap = L.map('map', {
-    center: [17.78266,-64.62116],
+    center: [17.78673508668526,-64.62036609736971],
     zoom: 15,
     maxZoom: 23,
     minZoom: 13,
@@ -43,8 +43,8 @@ function zoom2highlights() {
     if (ih>highlights.length-1) {ih=0;}
 }
 function zoom2home() {
-    var homelat = 17.78266;
-    var homelng = -64.62116;
+    var homelat = 17.78673508668526;
+    var homelng = -64.62036609736971;
     var homezoom = 15;
     mymap.flyTo([homelat, homelng],homezoom);
 }
